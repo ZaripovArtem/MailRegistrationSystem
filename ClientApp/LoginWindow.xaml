@@ -1,0 +1,39 @@
+﻿<Window x:Class="ClientApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApp"
+        mc:Ignorable="d"
+        Title="Система регистрации писем" Height="720" Width="1200"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid Width="600" HorizontalAlignment="Left">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#42458B" Offset="0" />
+                    <GradientStop Color="#121212" Offset="0.9" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="82" FontWeight="Bold">
+                Авторизация
+            </Label>
+        </Grid>
+        <Grid Width="600" HorizontalAlignment="Right">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#191926" Offset="0" />
+                    <GradientStop Color="#121212" Offset="0.9" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <TextBox x:Name="Email" Style="{StaticResource placeHolder}" Tag="Email" HorizontalAlignment="Center" Height="59" TextWrapping="Wrap" Margin="0, -60, 0, 0" Width="425" FontSize="38" />
+            <TextBox x:Name="Password" Style="{StaticResource placeHolder}" Tag="Пароль" HorizontalAlignment="Center" Height="59" TextWrapping="Wrap" Margin="0, 149, 0, 70" Width="425" FontSize="38" />
+
+            <Button x:Name="AuthorizeButton" Content="Авторизоваться" HorizontalAlignment="Center" Margin="0, 260, 0, 0" Height="59" Width="425" Background="White" FontSize="38" Click="AuthorizeButton_click"/>
+
+            <TextBlock x:Name="ErrorMessage" Foreground="Red" HorizontalAlignment="Center" FontSize="24" Margin="0, 600, 0, 0"/>
+        </Grid>
+    </Grid>
+</Window>
